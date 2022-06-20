@@ -15,16 +15,38 @@
         <em class="fas fa-search"></em>
     </div>
 
-    <ul class="task-list">
+    <div class="row justify-content-center">
         {% for lista in listas %}
-        <li class="task-item">
-            <span><a href="{{ lista.get_absolute_url }}">{{lista.titulo}}</a></span>
+
+        <div class="card p-0 m-4 col-12 col-md-4" style="width: 18rem;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body">
+            <h5 class="card-title">{{lista.titulo}}</h5>
+            <p class="card-text">{{lista.descricao}}.</p>
+            <a href="{{ lista.get_absolute_url }}" class="btn btn-dark">Ver tarefa</a>
+          </div>
+
+          <div class="card-footer">
+            <small class="text-muted">Última atualização: {{lista.atualizacao}}</small>
+          </div>
+
+          <div class="card-footer d-flex justify-content-center">
+              <span><i class="fas fa-edit"></i></span>
+              <span><i class="fas fa-trash"></i></span>
+          </div>
+
+        </div>
+
+
+
+        <!--<li class="task-item">
+            <span><a href="{{ lista.get_absolute_url }}"></a></span>
             <span><i class="fas fa-trash"></i></span>
             <span><i class="fas fa-edit"></i></span>
-        </li>
+        </li>-->
         {% endfor %}
-    </ul>
 
+    </div>
 </div>
 
 {% endblock %}
