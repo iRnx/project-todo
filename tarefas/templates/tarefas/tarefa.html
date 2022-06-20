@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Tarefa '{{ tarefa.titulo }}'{% endblock %}
+
+{% block content %}
+
+<div class="offset-1 col-10 list-div">
+    <h1>{{ tarefa.titulo }}</h1>
+    <p><strong>Descrição da Tarefa:</strong> {{ tarefa.descricao }}</p>
+    <p><strong>Criado em:</strong> {{ tarefa.dataHora }}</p>
+    <p><strong>Editado em:</strong> {{ tarefa.atualizacao }}</p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="offset-1 col-10 list-div">
+    <h1>Lista de Tarefas</h1>
+    <a id="add-link" href="newtask/">
+        <div class="col-2 add-div">
+            <em class="fas fa-plus"></em> Adicionar tarefa
+        </div>
+    </a>
+
+    <div class="col-9 search-div">
+        <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome da tarefa para buscar">
+        <em class="fas fa-search"></em>
+    </div>
+
+    <ul class="task-list">
+        {% for lista in listas %}
+        <li class="task-item">
+            <span><a href="{{ lista.get_absolute_url }}">{{lista.titulo}}</a></span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
