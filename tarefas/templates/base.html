@@ -9,49 +9,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
     {% bootstrap_css %}
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body class="degrade">
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light ps-4">
             <a class="navbar-brand" href="/">To Do</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Tarefas</a>
+                        <a class="nav-link active" aria-current="page" href="/">Tarefas</a>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="#">Usuários</a>
-                        </li>
+
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/accounts/login">Entrar</a>
+                        <a class="nav-link" href="#">Entrar</a>
                     </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Cadastre-se</a>
+                    </li>
+
 
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre nós</a>
                     </li>
 
+
                     <li class="nav-item">
-                            <a class="nav-link" href="/accounts/logout">Sair</a>
-                        </li>
+                        <a class="nav-link" href="#">Sair</a>
+                    </li>
+
+
 
                 </ul>
             </div>
         </nav>
         {% block content %}
         {% endblock %}
-
         <footer>
-            <p>horaDeCodar ToDo</p>
+            <p>Feito por: <a href="https://github.com/iRnx" target="_blank">Renan Gustavo Alves</a></p>
         </footer>
     </div>
+
+
 
     {% bootstrap_javascript %}
     <script src="{% static 'js/script.js' %}"></script>

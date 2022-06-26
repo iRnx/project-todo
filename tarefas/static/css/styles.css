@@ -42,11 +42,13 @@
     margin-rigth: 25px;
 }
 
+
 .fas.fa-plus {
     color: #FFF;
     margin-right: 10px;
     margin-left: 5px;
 }
+
 
 /* Search */
 
@@ -57,13 +59,25 @@
     cursor: pointer;
 }
 
-.search-div {
-    padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: inline-block;
+
+.submit-lente {
+  position:absolute;
+  top:0; right:0;
+  z-index:10;
+  border:none;
+  background:transparent;
+  outline:none;
 }
 
+.submit-line {
+  position: relative;
+  width: 75%;
+  display: inline-block;
+}
+
+.submit-line input {
+  width: 100%;
+}
 /* Lista de tarefas */
 
 .list-div {
@@ -153,3 +167,6 @@ a:hover {
     box-shadow: 0 0 0 0.2rem rgba(0, 0 , 0, 0.23);
 }
 
+.invisivel {
+    display: none;
+}

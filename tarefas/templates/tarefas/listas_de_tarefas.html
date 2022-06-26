@@ -2,27 +2,38 @@
 
 {% block content %}
 
-<div class="offset-1 col-10 list-div">
-    <h1>Lista de Tarefas</h1>
-    <a id="add-link" href="newtask/">
+<!--
+<a id="add-link" href="newtask/">
         <div class="col-2 add-div">
             <em class="fas fa-plus"></em> Adicionar tarefa
         </div>
     </a>
+-->
 
-    <div class="col-9 search-div">
-        <input class="form-control" type="text" id="search" name="search" placeholder="Digite o nome da tarefa para buscar">
-        <em class="fas fa-search"></em>
+<div class="container col-10 list-div text-center">
+    <h1 class="mb-4">Lista de Tarefas</h1>
+
+    <a href="newtask/" class="btn btn-dark">
+        <em class="fas fa-plus"></em>Adicionar tarefa
+    </a>
+
+    <div class="col-9  submit-line ps-4 mb-2 mt-3">
+
+        <input class="form-control" type="text" id="search" name="search" placeholder="Buscar tarefa">
+        <button class="submit-lente" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+
     </div>
+
 
     <div class="row justify-content-center">
         {% for lista in listas %}
 
-        <div class="card p-0 m-4 col-12 col-md-4" style="width: 18rem;">
+        <div class="card p-0 m-4 col-12 col-md-4 card-array" style="height: 18rem; width: 18rem;">
           <!--<img src="..." class="card-img-top" alt="...">-->
-          <div class="card-body">
-            <h5 class="card-title">{{lista.titulo}}</h5>
-            <p class="card-text">{{lista.descricao}}.</p>
+          <div class="card-body text-center">
+            <h5 class="card-title mb-5 titulo">{{lista.titulo}}</h5>
             <a href="{{ lista.get_absolute_url }}" class="btn btn-dark">Ver tarefa</a>
           </div>
 

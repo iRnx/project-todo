@@ -10,5 +10,3 @@ def listas_de_tarefas(request):
 def tarefa(request, slug):
     tarefa = get_object_or_404(Tarefa, slug=slug)
     return render(request, 'tarefas/tarefa.html', {'tarefa': tarefa})
-
-

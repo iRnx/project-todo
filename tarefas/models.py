@@ -42,4 +42,3 @@ def tarefa_pre_save(signal, instance, sender, **kwargs):
 signals.pre_save.connect(tarefa_pre_save, sender=Tarefa)
 
 
-
