@@ -114,15 +114,17 @@
 /* Rodapé */
 
 footer {
-    background-color: #212529;
-    height: 25px;
-    /*border-top: 2px solid #202020;*/
+    background-color: #333;
+    height: 378px;
+
 }
 
 footer p {
     color: #f5f5f5;
     text-align: center;
+    top: 50%;
     position: relative;
+
 }
 
 #procurar {
@@ -139,10 +141,12 @@ footer p {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 a:hover {
     text-decoration: none;
+    color: white;
 }
 
 .centralizar {
@@ -158,9 +162,7 @@ a:hover {
     background: linear-gradient(to top, #f1cbcb, #FFFFFF);
 }*/
 
-.degrade {
-    background-color: #FFF;
-}
+
 
 .form-control:focus {
     border-color: black;

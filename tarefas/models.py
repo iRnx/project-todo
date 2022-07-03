@@ -28,6 +28,9 @@ class Tarefa(models.Model):
     def get_absolute_url(self):
         return reverse('tarefa', kwargs={'slug': self.slug})
 
+    def get_absolute(self):
+        return reverse('editar_tarefa', kwargs={'slug': self.slug})
+
     # uma forma de fazer o slug sem usar signals #
     """def save(self, *args, **kwargs):  # new
         if not self.slug:

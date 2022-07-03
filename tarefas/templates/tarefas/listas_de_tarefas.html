@@ -13,7 +13,7 @@
 <div class="container col-10 list-div text-center">
     <h1 class="mb-4">Lista de Tarefas</h1>
 
-    <a href="newtask/" class="btn btn-dark">
+    <a href="{% url 'adicionar_tarefa' %}" class="btn btn-dark">
         <em class="fas fa-plus"></em>Adicionar tarefa
     </a>
 
@@ -42,7 +42,7 @@
           </div>
 
           <div class="card-footer d-flex justify-content-center">
-              <span><i class="fas fa-edit"></i></span>
+              <a href="{{ lista.get_absolute }}"><span><i class="fas fa-edit"></i></span></a>
               <span><i class="fas fa-trash"></i></span>
           </div>
 

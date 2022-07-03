@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body class="degrade">
+<body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light ps-4">
             <a class="navbar-brand" href="/">To Do</a>
@@ -46,22 +46,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sair</a>
                     </li>
-
-
-
                 </ul>
             </div>
         </nav>
         {% block content %}
         {% endblock %}
-        <footer>
-            <p>Feito por: <a href="https://github.com/iRnx" target="_blank">Renan Gustavo Alves</a></p>
-        </footer>
+
     </div>
-
-
 
     {% bootstrap_javascript %}
     <script src="{% static 'js/script.js' %}"></script>
+    <footer>
+        <p>Feito por: <a href="https://github.com/iRnx" target="_blank">Renan Gustavo Alves</a></p>
+    </footer>
 </body>
+
 </html>
